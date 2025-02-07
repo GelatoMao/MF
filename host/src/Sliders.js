@@ -1,4 +1,7 @@
 import React from 'react';
-export default () => (
-  <div>Sliders</div>
-)
+
+const Sliders = () => {
+  return <div>Sliders Component</div>;
+};
+
+export default Sliders;

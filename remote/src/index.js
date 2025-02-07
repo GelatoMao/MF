@@ -1,1 +1,1 @@
-import ('./bootstrap')
+import ('./bootstrap') // 要异步导入

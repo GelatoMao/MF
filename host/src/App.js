@@ -1,18 +1,32 @@
 import React from 'react';
-import Sliders from './Sliders';
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  useNavigate,
+} from "react-router-dom";
+import A from "./a";
+import B from "./b";
 
-const RemoteNewsList = React.lazy(()=>import('remote/NewsList'));
+function Home() {
+  const navigate = useNavigate();
 
-const App = ()=>{
   return (
     <div>
-      <h1>本地组件Sliders</h1>
-      <Sliders />
-      <h1>远程组件NewsList</h1>
-      <React.Suspense fallback="loading NewsList">
-        <RemoteNewsList/>
-      </React.Suspense>
+      <button onClick={() => navigate("/a")}>Go to A</button>
+      <button onClick={() => navigate("/b")}>Go to B</button>
     </div>
+  );
+}
+function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/a" element={<A />} />
+        <Route path="/b" element={<B />} />
+      </Routes>
+    </Router>
   );
 }
 

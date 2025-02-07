@@ -1,4 +1,7 @@
 import React from 'react';
-export default () => (
-  <div>NewsList</div>
-)
+
+const NewsList = () => {
+  return <div>NewsList Component</div>;
+};
+
+export default NewsList;
