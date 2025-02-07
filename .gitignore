@@ -1,2 +1,4 @@
-./remote/node_modules
+./remote/node_modules/*
 ./host/node_modules
+./remote/dist
+.host/dist
